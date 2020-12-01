@@ -4,6 +4,11 @@
 	<title>QRCode generator</title>
 </head>
 <body>
-	<input type="text" name="entrer">
+	<label>Veulliez entrer votre message</label>
+	<input type="text" name="entrer" id="texte" onkeyup="genereQRCode();">
+	<div id="qrcode"></div>
+
+<script type="text/javascript" src="qrcode.min.js"></script>
+<script type="text/javascript" src="generateQR.js"></script>
 </body>
 </html>
