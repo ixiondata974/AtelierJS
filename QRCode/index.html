@@ -11,7 +11,6 @@
     <div class="title">QR Code</div>
              
     </div>
-    <form name="QrForm">
     <div class="form-group">
         <label for="Nom">Nom :</label>
         <input  class="form-control" id="Nom" type="text"  >
@@ -30,9 +29,8 @@
         <input  class="form-control" id="heure" type="time">
     </div>
     <div >
-        <button class="btn btn-primary" onsubmit="DonnesForm()">Generer le QR code</button>
+        <button class="btn btn-primary" onclick="DonnesForm()">Generer le QR code</button>
     </div>
-    </form>
 
     <div id="qrcode"></div>
 

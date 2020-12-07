@@ -1,29 +1,34 @@
 var texte = document.getElementById("texte");
 
-var Formulaire = [];
 var DonneeForm = "";
-/*var Nom = document.getElementById("Nom");
-var Prenom = document.getElementById("Prenom");
+var nom = document.getElementById("Nom");
+var prenom = document.getElementById("Prenom");
 var adresse = document.getElementById("adresse");
-var heure = document.getElementById("heure");*/
+var heure = document.getElementById("heure");
 var geneQR = new QRCode(document.getElementById("qrcode"));
 
+var formAlt = [Nom,Prenom, adresse, heure];
+
 function genereQRCode(chaine) {
-	var valText = chaine.value;
+	var valText = chaine;
 	geneQR.makeCode(valText);
 }
 
-
 function DonnesForm()
 {
-	for(var i=0; i<document.forms["QrForm"].length;i++)
-	{
-		Formulaire[i] = document.forms["QrForm"].elements[i].value;
-		DonneeForm += Formulaire[i] + ' ';
-	}
-	genereQRCode(DonneeForm);
-	
+	var Nom = nom.value;
+	var Prenom = prenom.value;
+	var Adresse = adresse.value;
+	var Heure = heure.value;
 
+	var formAlt = [Nom,Prenom, Adresse, Heure];
+
+	DonneeForm += formAlt[0]+" ";
+	for (var i = 1; i < formAlt.length; i++) {
+		DonneeForm += formAlt[i]+" ";
+	}
+
+	genereQRCode(DonneeForm);
 }
 	
 
