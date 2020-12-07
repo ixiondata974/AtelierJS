@@ -1,0 +1,62 @@
+* {
+    margin: 0; padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+    height: 100%;
+
+    font-family: Arial, sans-serif;
+    color: #e9e9e9;
+}
+
+
+.title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#tempo {
+    font-size: 40px;
+}
+
+.bpm {
+    font-size: 12px;
+    text-align: center;
+}
+
+.tempo-controls {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+}
+
+.tempo-container {
+    margin: 0 15px;
+}
+
+
+.created-by {
+    margin-top: 40px;
+}
+
+a {
+    color: #e9e9e9;
+}
+
+a:hover {
+    color: #356161;
+}
