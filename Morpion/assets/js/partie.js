@@ -1,16 +1,12 @@
-class partie{
+class Partie{
 	constructor(tableau){
 		this.tableau = tableau;
 		this.iconCercle = false;
 		this.enCoursDeJeu = false;
 	}
 
-	start(){
-		if (this.enCoursDeJeu) return;
-	}
-
 	conditionDeVictoir(){
-		if (this.tableau) {
+		if (this.tableau[1].src == this.tableau[2].src == this.tableau[3].src) {
 			return true;
 		}
 	}
@@ -19,9 +15,18 @@ class partie{
 		
 	}
 
-	stop(){
-		if (!this.conditionDarret()) {
-			this.tableau = false;
+	changementIcon(){
+		if (this.iconCercle){
+			return "assets/img/croix.jpg";
 		}
+		return "assets/img/cercle.jpg";
+	}
+
+	EnCoursDePartie(){
+		return "assets/img/vide.jpg";
+	}
+
+	setIcon(){
+		this.iconCercle = !this.iconCercle;
 	}
 }
